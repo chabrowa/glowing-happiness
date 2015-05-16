@@ -27,8 +27,8 @@ Template.signup.events({
     var userPass2 = template.find('#userPass2').value;
     //var userPassRepeat template.find('#userPassRepeat').value;
     
-    var userRace = template.find('[name=playerRace]').value;
-    var userClass = template.find('[name=playerClass]').value;
+    var userRace = template.find('[name=playerRace]:checked').value;
+    var userClass = template.find('[name=playerClass]:checked').value;
     
    var validates = true;
 
@@ -47,6 +47,8 @@ Template.signup.events({
       }, function (error) {
         if (error) {
           console.log("Cannot create user");
+        } else {
+          Session.set('page', 'hello');
         }
       });
     }

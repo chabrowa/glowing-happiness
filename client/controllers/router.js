@@ -1,4 +1,4 @@
-Session.setDefault('page', 'login');
+Session.setDefault('page', 'hello');
 
 Template.router.helpers({
   goToSignup: function () {

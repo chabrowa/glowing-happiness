@@ -1,12 +1,3 @@
-Session.setDefault('page', 'login');
-
-Template.signupOrLogin.helpers({
-  goToSignup: function () {
-    return Session.get('page') === 'signup';
-  }
-});
-
-
 Template.login.events({
   'submit': function (event, template) {
     event.preventDefault();
@@ -17,7 +8,8 @@ Template.login.events({
       if(error) {
        console.log(error); 
       } else {
-       console.log("loged in!"); 
+        Session.set('page', 'hello');
+        console.log("loged in!"); 
       }
     });
   },

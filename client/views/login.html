@@ -1,0 +1,50 @@
+<template name="login">
+  <h1>Login</h1>
+  
+  <form>
+    Username: <input type="text" id="userName" /><br>
+    Password: <input type="password" id="userPass" /><br>
+    <input type="submit" /><br>
+  </form>
+   
+  Go to signup
+  <button>sign up</button>
+  
+</template>
+
+<template name="signup">
+  <h1>Sign up</h1>
+  
+  <form>
+    Username: <input type="text" id="userName" /><br>
+    Password: <input type="password" id="userPass" /><br>
+    Repeat password: Password: <input type="password" id="userPass2" /><br>
+    
+    Race:<br>
+    <input type="radio" name="playerRace" value="human" checked /> Human <br>
+    <input type="radio" name="playerRace" value="cyborg" /> Cyborg <br>
+    <input type="radio" name="playerRace" value="troll" /> Troll <br>
+
+    Class:<br>
+    <input type="radio" name="playerClass" value="hacker" checked /> hacker <br>
+    <input type="radio" name="playerClass" value="hunter" /> hunter <br>
+    <input type="radio" name="playerClass" value="browser" /> browser <br>
+    <input type="radio" name="playerClass" value="hater" /> hater <br>
+    	
+    <input type="submit" /><br>
+  </form>
+   
+  Go to login
+  <button>login</button>
+  
+</template>
+
+<template name="signupOrLogin">
+  
+  {{#if goToSignup}}
+    {{> signup}}
+  {{else }}
+    {{>login}}
+  {{/if}}
+  
+</template>

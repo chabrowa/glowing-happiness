@@ -1,0 +1,35 @@
+<head>
+  <title>zombie-game</title>
+</head>
+
+<body>
+  <h1>Zombie game!</h1>
+
+  {{#if currentUser }}
+    {{> cityOrPersonalPage}}
+  {{else }}
+    {{> signupOrLogin}}
+  {{/if}}
+</body>
+
+<template name="hello">
+  <p>You are logged in!</p>
+  <button id="logOut">log out!</button>
+  <button id="cityPage">go to city</button>
+</template>
+
+<template name="city">
+  <p>Welcom in Web</p>
+  <button id="logOut">log out!</button>
+  <button id="personalPage">your character</button>
+</template>
+
+<template name="cityOrPersonalPage">
+
+  {{#if currentLocation}}
+    {{> hello}}
+  {{else }}
+    {{>city}}
+  {{/if}}
+  
+</template>

@@ -1,12 +1,3 @@
-Session.setDefault('page', 'login');
-
-Template.signupOrLogin.helpers({
-  goToSignup: function () {
-    return Session.get('page') === 'signup';
-  }
-});
-
-
 Template.login.events({
   'submit': function (event, template) {
     event.preventDefault();
@@ -17,7 +8,8 @@ Template.login.events({
       if(error) {
        console.log(error); 
       } else {
-       console.log("loged in!"); 
+        Session.set('page', 'hello');
+        console.log("loged in!"); 
       }
     });
   },
@@ -35,8 +27,8 @@ Template.signup.events({
     var userPass2 = template.find('#userPass2').value;
     //var userPassRepeat template.find('#userPassRepeat').value;
     
-    var userRace = template.find('[name=playerRace]').value;
-    var userClass = template.find('[name=playerClass]').value;
+    var userRace = template.find('[name=playerRace]:checked').value;
+    var userClass = template.find('[name=playerClass]:checked').value;
     
    var validates = true;
 
@@ -55,6 +47,8 @@ Template.signup.events({
       }, function (error) {
         if (error) {
           console.log("Cannot create user");
+        } else {
+          Session.set('page', 'hello');
         }
       });
     }

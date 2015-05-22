@@ -1,3 +1,7 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
 /********* PROGRESS BARS *********/
 .meter { 
 	height: 20px;  /* Can be anything */
@@ -77,6 +81,7 @@
     visibility: hidden;
     transition: visibility .5s;
     margin: 0 0 0 -6px;
+    pointer-events: none;
 }  
 .drop-menu-content li {
     margin: 5px;

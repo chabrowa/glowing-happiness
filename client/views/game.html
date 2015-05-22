@@ -16,9 +16,7 @@
     </ul>
   </div> 
 </header>
-  <div class="left-side">
-  <p>character photo</p>
-  </div>
+  {{> character}}
   <div class="right-side">
     <div class="health">
         HP:
@@ -56,4 +54,8 @@
 
 </template>
 
-
+<template name="character">
+  <div class="left-side">
+    <canvas id="canvas" width="500" height="500" ></canvas>
+  </div>
+</template>

@@ -16,12 +16,9 @@
     </ul>
   </div> 
 </header>
-  <div class="left-side">
-  <p>character photo</p>
-  </div>
-  
+  {{> character}}
   <div class="right-side">
-    
+
     <div class="fist-line">
       <div class="king">
         King of<br>1<br>page!
@@ -31,7 +28,7 @@
         100
       </div>
     </div>
-    
+
     <div class="second-line">
       <div class="stats">
         Strength:
@@ -47,9 +44,9 @@
           <span style="width: 25%"></span>
         </div>
       </div>
-      
+
     </div>
-    
+
     <div class="third-line">
       <div class="description">
 
@@ -72,4 +69,8 @@
 
 </template>
 
-
+<template name="character">
+  <div class="left-side">
+    <canvas id="canvas" width="500" height="500" ></canvas>
+  </div>
+</template>

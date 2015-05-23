@@ -48,7 +48,7 @@ Template.character.onRendered(function() {
             arcs.push(makeArc({
               width: width,
               radius: currentRadius,
-              color: '#98ECF0',
+              color: '#39B3C1',
               speed: 5 + Math.random() * 5,
               size: 2 * Math.PI - Math.random() * Math.PI,
               separations: Math.round(Math.random() * 4),
@@ -59,8 +59,7 @@ Template.character.onRendered(function() {
     };
     var loop = function(j) {
         // Add a motion blur
-        ctx.fillStyle = 'rgba(2, 7, 13, 0.5)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (var i = 0; i < arcs.length; i++) {
             arcs[i].draw();
         }

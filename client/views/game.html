@@ -18,6 +18,7 @@
 </header>
   {{> character}}
   <div class="right-side">
+
     <div class="right-side-inner">
       <div class="fist-line">
         <div class="king">
@@ -58,7 +59,7 @@
 
   </div>
   
-  <footer>
+  <footer class="footer">
     <div class="level">
     Level:
     <div class="meter blue">
@@ -75,5 +76,6 @@
 <template name="character">
   <div class="left-side">
     <canvas id="canvas" width="500" height="500" ></canvas>
+    <img src="/images/character1.png" id="character" />
   </div>
 </template>

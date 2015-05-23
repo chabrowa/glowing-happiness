@@ -8,6 +8,7 @@
 body {
   background-color: @back;
   color: white;
+  font-family: 'Ubuntu Mono';
 }
 
 *, *:after, *:before {
@@ -134,14 +135,19 @@ body {
   width: 400px;
   height: 500px;
   position: relative;
-  border-left: 1px solid white;
-
+  padding: 0px 15px;
+  .right-side-inner {
+    border: 1px solid @base;
+    box-shadow: 0 0 4px @base;
+    padding: 5px;
+  }
 }
 
 /****************** RIGHT SIDE **************/
 
 .fist-line {
-  margin: 15px;
+  padding: 15px;
+    border: 1px solid @base;
   .king {
     height: 100px;
     width: 100px;
@@ -160,8 +166,13 @@ body {
   }
 }
 
+.clearfix {
+   clear: both; 
+}
+
 .second-line {
-  clear: both;
+  border-left: 1px solid @base;
+  border-right: 1px solid @base;
   padding: 15px;
 
   .stats {
@@ -171,11 +182,12 @@ body {
 }
 
 .third-line {
-  margin: 15px;
+  padding: 15px;
+  border: 1px solid @base;
   .description {
     background-color: @bright-back;
     padding: 10px;
-    height: 200px;
+    height: 150px;
     width: 100%;
 
   }

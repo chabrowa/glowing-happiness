@@ -15,6 +15,7 @@ Template.login.events({
   },
 
   'click button': function (event, template) {
+    console.log('click')
     Session.set('page', 'signup');
   }
 });

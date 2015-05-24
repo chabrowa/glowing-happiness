@@ -3,7 +3,9 @@ Meteor.methods({
   changeURL: function(url, userId) {
     check(url, String);
     if (userId) {
-      Meteor.users.update(userId, {$set: {'profile.url': url}});
+      Meteor.users.update(userId, {$set: {'profile.url': url}}, function() {return 'got it';});
+    } else {
+      return 'not connected';
     }
   }
 });

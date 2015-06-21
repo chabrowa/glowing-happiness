@@ -1,10 +1,7 @@
-Session.setDefault('page', 'hello');
+Session.setDefault('page', 'news');
 
 Template.router.helpers({
-  goToSignup: function () {
-    return Session.get('page') === 'signup';
-  },
-  currentLocation: function () {
-    return Session.get('page') === 'hello';
+  'selected_page': function(name) {
+    return Session.get('page') === name;
   }
 });

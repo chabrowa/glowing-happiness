@@ -1,0 +1,68 @@
+@import 'colors';
+
+.inventory-template {
+  padding-right: 50px;
+  width: 900px;
+  float: right;
+
+  .item {
+    width: 150px;
+    float: left;
+    margin-right: 25px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .label {
+      text-align: center;
+      color: @light-blue;
+      font-size: 0.6em;
+      letter-spacing: 2px;
+      margin-bottom: 0;
+    }
+    .name {
+      text-align: center;
+      letter-spacing: 2px;
+      margin-top: 5px;
+    }
+
+    .select-box {
+      &.selected {
+        border-top: 1px solid @neon-blue;
+        background-image:
+            linear-gradient(@neon-blue, transparent),
+            linear-gradient(@neon-blue, transparent);
+        background-size: 1px 100%;
+        background-position: 0 0, 100% 0;
+        background-repeat: no-repeat;
+        .image {
+          background-image: linear-gradient(to top, fade(@neon-blue, 30), transparent, transparent);
+        }
+      }
+      .image {
+        height: 75px;
+        background-image: linear-gradient(to top, fade(gray, 30), transparent, transparent);
+      }
+      .characteristic {
+        margin-top: 25px;
+        text-align: center;
+        height: 75px;
+        span {
+          line-height: 50px;
+          position: relative;
+          letter-spacing: 2px;
+          font-size: 1.5em;
+          font-weight: 100;
+          &:before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            top: -35px;
+            color: @neon-blue;
+            font-size: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}

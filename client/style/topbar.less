@@ -1,0 +1,210 @@
+@import 'colors';
+
+.topbar {
+  margin-top: 25px;
+  margin-left: 25px;
+  height: 50px;
+  .left-part {
+    float:left;
+    position: relative;
+    .arrow {
+      float: left;
+      width: 100px;
+      height: 50px;
+    }
+    .separator {
+      width: 1px;
+      height: 20px;
+      float: left;
+      background: @light-blue;
+      margin-top: 15px;
+      box-shadow: 0 0 2px 1px @light-blue;
+    }
+    .name, .alliance, .xp, .money {
+      float: left;
+    }
+
+    .name {
+      width: 199px;
+      text-align: center;
+      span {
+        line-height: 50px;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        &:before {
+          content: 'name';
+          position: absolute;
+          text-transform: lowercase;
+          left: 0;
+          top: -30px;
+          color: @neon-blue;
+          font-size: 0.5em;
+        }
+      }
+    }
+    .alliance {
+      width: 199px;
+      text-align: center;
+      span {
+        line-height: 50px;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        &:before {
+          content: 'clan';
+          position: absolute;
+          text-transform: lowercase;
+          left: 0;
+          top: -30px;
+          color: @neon-blue;
+          font-size: 0.5em;
+        }
+      }
+    }
+    .xp {
+      width: 299px;
+      padding-left: 49px;
+      padding-right: 50px;
+      padding-top: 15px;
+      .label-left {
+        float: left;
+        font-size: 0.6em;
+        letter-spacing: 2px;
+        .label {
+          color: @light-blue;
+        }
+      }
+      .label-right {
+        float: right;
+        font-size: 0.6em;
+        letter-spacing: 2px;
+        .label {
+          color: @light-blue;
+        }
+      }
+
+      .progress {
+        clear: both;
+        margin-top: 17px;
+        width: 100%;
+        height: 2px;
+        border-radius: 1px;
+        background: #455058;
+        .current-progress {
+          height: 2px;
+          background: @neon-blue;
+          box-shadow: 0 0 5px 1px @neon-blue;
+          border-radius: 1px;
+          position: relative;
+          &:after {
+            content: ' ';
+            position: absolute;
+            box-shadow: 0 0 8px 3px @light-blue;
+            right: 0;
+            top: 1px;
+          }
+        }
+      }
+    }
+    .money {
+      width: 150px;
+      .icon {
+        float: left;
+        width: 30px;
+        margin-top: 10px;
+      }
+
+      .label {
+        margin-left: 40px;
+        color: @light-blue;
+        font-size: 0.6em;
+        letter-spacing: 2px;
+        margin-bottom: 0;
+      }
+
+      .value {
+        margin-left: 40px;
+        font-size: 0.8em;
+        letter-spacing: 2px;
+        margin-top: 5px;
+      }
+
+      &.credit {
+        padding-left: 30px;
+      }
+    }
+  }
+
+  .right-part {
+    float: right;
+    position: relative;
+    width: 300px;
+    div {
+      width: 50px;
+      height: 50px;
+      float: left;
+      .label {
+        position: absolute;
+        right: 0;
+        top: 50px;
+        text-align: right;
+        color: transparent;
+        transition: all 0.25s ease-out;
+        width: 300px;
+        line-height: 50px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 0.8em;
+      }
+      svg {
+        width: 24px;
+        margin-top: 13px;
+        margin-left: 13px;
+        .graphic {
+          fill: #455058;
+          transition: all 0.25s ease-out;
+        }
+      }
+      &:hover {
+        .label {
+          color: @light-blue;
+        }
+        .graphic {
+          fill: @neon-blue;
+        }
+      }
+
+      &.selected {
+        &:hover .label {
+          color: transparent;
+        }
+        .graphic {
+          fill: #FFF;
+        }
+        border-bottom: 1px solid @neon-blue;
+        background-image:
+            linear-gradient(to top, @neon-blue, transparent),
+            linear-gradient(to top, @neon-blue, transparent);
+        background-size: 1px 100%;
+        background-position: 0 0, 100% 0;
+        background-repeat: no-repeat;
+        position: relative;
+        &:before {
+          content: ' ';
+          position: absolute;
+          box-shadow: 0 0 15px 2px @light-blue;
+          left: 0;
+          bottom: 0;
+        }
+        &:after {
+          content: ' ';
+          position: absolute;
+          box-shadow: 0 0 15px 2px @light-blue;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,42 +1,58 @@
-<template name="login">
-  <h1>Login</h1>
-  
-  <form>
-    Username: <input type="text" id="userName" /><br>
-    Password: <input type="password" id="userPass" /><br>
-    <input type="submit" /><br>
-  </form>
-   
-  Go to signup
-  <button>sign up</button>
-  
+<template name="landing">
+  {{#if show_login}}
+    {{> login}}
+  {{else}}{{#if show_signup}}
+    {{> signup}}
+  {{else}}
+    {{> home}}
+  {{/if}}{{/if}}
 </template>
 
-<template name="signup">
-  <h1>Sign up</h1>
-  
-  <form>
-    Username: <input type="text" id="userName" /><br>
-    Password: <input type="password" id="userPass" /><br>
-    Repeat password: Password: <input type="password" id="userPass2" /><br>
-    
-    Race:<br>
-    <input type="radio" name="playerRace" value="human" checked /> Human <br>
-    <input type="radio" name="playerRace" value="cyborg" /> Cyborg <br>
-    <input type="radio" name="playerRace" value="troll" /> Troll <br>
-
-    Class:<br>
-    <input type="radio" name="playerClass" value="hacker" checked /> hacker <br>
-    <input type="radio" name="playerClass" value="hunter" /> hunter <br>
-    <input type="radio" name="playerClass" value="browser" /> browser <br>
-    <input type="radio" name="playerClass" value="hater" /> hater <br>
-    	
-    <input type="submit" /><br>
-  </form>
-   
-  Go to login
-  <button>login</button>
-  
+<template name="home">
+  <button class='goTosignup'>Create an account</button>
+  <button class='goTologin'>Already got an account?</button>
 </template>
 
+<template name='login'>
+  <div class='login'>
+    <h1>Login</h1>
 
+    <form id='login'>
+      <div>
+        <label for='username'>Username</label><input type="text" id="username" />
+      </div>
+      <div>
+        <label for='password'>Password</label><input type="password" id="password" />
+      </div>
+      <button type="submit">Go!</button>
+    </form>
+    <button class='back'>back</button>
+  </div>
+</template>
+
+<template name='signup'>
+  <div class='signup'>
+    <h1>Signup</h1>
+
+    <form id='signup'>
+      <div>
+        <label for='username'>Username</label><input type="text" id="username_signup" />
+      </div>
+      <div>
+        <label for='password'>Password</label><input type="password" id="password_signup" />
+      </div>
+      Race:<br>
+      <input type="radio" name="playerRace" value="human" checked /> Human <br>
+      <input type="radio" name="playerRace" value="cyborg" /> Cyborg <br>
+      <input type="radio" name="playerRace" value="troll" /> Troll <br>
+
+      Class:<br>
+      <input type="radio" name="playerClass" value="warrior" checked /> warrior <br>
+      <input type="radio" name="playerClass" value="hunter" /> hunter <br>
+      <input type="radio" name="playerClass" value="thief" /> thief <br>
+      <input type="radio" name="playerClass" value="miner" /> miner <br>
+      <button type="submit">Create your Account</button>
+    </form>
+    <button class='back'>back</button>
+  </div>
+</template>

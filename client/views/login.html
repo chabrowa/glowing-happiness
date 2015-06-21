@@ -11,7 +11,7 @@
 <template name="home">
   <div class="game-title"><p>Computer Heroes</p></div>
   <button class='goTosignup'>Create an account</button>
-  <button class='goTologin'>Already got an account?</button>
+  <button class='linkBtn goTologin'>Already got an account?</button>
 </template>
 
 <template name='login'>
@@ -28,7 +28,7 @@
         </div>
         <button class="loginBtn" type="submit">Go!</button>
       </form>
-      <button class='goTologin back'>Back to the home page</button>
+      <button class='linkBtn back'>Back to the home page</button>
     </div>
   </div>
 </template>
@@ -36,7 +36,7 @@
 <template name='signup'>
   <div class="main">
     <div class='signup'>
-      <h1>Signup</h1>
+      <p class="login-title">Signup</p>
 
       <form id='signup'>
         <div>
@@ -50,9 +50,9 @@
         <input type="radio" name="playerClass" value="hunter" /> hunter <br>
         <input type="radio" name="playerClass" value="thief" /> thief <br>
         <input type="radio" name="playerClass" value="miner" /> miner <br>
-        <button type="submit">Create your Account</button>
+        <button class="loginBtn" type="submit">Create your Account</button>
       </form>
-      <button class='back'>back</button>
+      <button class='linkBtn back'>Back to the home page</button>
     </div>
   </div>
 </template>

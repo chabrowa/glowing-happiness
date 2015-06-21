@@ -9,5 +9,20 @@ Meteor.methods({
     } else {
       return 'not connected';
     }
+  },
+  // called by the extension when there is a fight
+  changeURL: function(userId, fight) {
+    console.log('FIGHT: ' + userId + ' at ' + url);
+    if (userId) {
+      Fights.insert({
+        attacker: userId,
+        defender: fight[fight.length - 1].opponent._id,
+        winner: fight[fight.length - 1].action === 'win' ? 'attacker' : 'defender',
+        createdAt: new Date()
+      });
+      return 'got it';
+    } else {
+      return 'not connected';
+    }
   }
 });

@@ -37,7 +37,6 @@ Template.login.events({
   'click .back': function(e) {
     e.preventDefault();
     Session.set('landing_page', 'home');
-    console.log('click')
   }
 });
 

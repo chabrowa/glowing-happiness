@@ -44,9 +44,53 @@
 }
 .signup {
   float: right;
-  margin-right: 350px;
+  margin-right: 150px;
+  position: relative;
   .linkBtn {
     width: 100%;
+  }
+  .race {
+    position: absolute;
+    width: 240px;
+    left: -250px;
+    top: 50px;
+    div {
+      float: left;
+      width: 100px;
+      margin: 10px;
+      height: 100px;
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+    }
+    input:checked + label {
+      border: 1px solid @neon-blue;
+      box-shadow: 0 0 15px 1px fade(@neon-blue, 20);
+    }
+    label {
+      transition: all 0.25s ease-out;
+      height: 100%;
+      width: 100%;
+      display: block;
+      border: 1px solid #FFF;
+      border-radius: 3px;
+      img {
+        width: 50px;
+        margin-left: 25px;
+        margin-top: 15px;
+      }
+      p {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 0.8em;
+        letter-spacing: 2px;
+        color: @neon-blue;
+      }
+    }
   }
 }
 .login-title {
@@ -56,11 +100,11 @@
   margin-top: 0px;
   margin-bottom: 5px;
 }
-label {
+.text-label {
   display: block;
   margin-top: 10px;
 }
-input {
+.text-input {
   background-color: transparent;
   border: none;
   outline: none;
@@ -81,5 +125,7 @@ input {
   font-size: 20px;
   cursor: pointer;
 }
+
+
 
 

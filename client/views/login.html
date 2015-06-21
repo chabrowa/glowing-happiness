@@ -21,10 +21,10 @@
 
       <form id='login'>
         <div>
-          <label for='username'>Username</label><input type="text" id="username" />
+          <label for='username' class='text-label'>Username</label><input type="text" id="username" class='text-input' />
         </div>
         <div>
-          <label for='password'>Password</label><input type="password" id="password" />
+          <label for='password' class='text-label'>Password</label><input type="password" id="password" class='text-input' />
         </div>
         <button class="loginBtn" type="submit">Go!</button>
       </form>
@@ -40,16 +40,29 @@
 
       <form id='signup'>
         <div>
-          <label for='username'>Username</label><input type="text" id="username_signup" />
+          <label for='username' class='text-label'>Username</label><input type="text" id="username_signup" class='text-input'/>
         </div>
         <div>
-          <label for='password'>Password</label><input type="password" id="password_signup" />
+          <label for='password' class='text-label'>Password</label><input type="password" id="password_signup" class='text-input' />
         </div>
-        Class:<br>
-        <input type="radio" name="playerClass" value="warrior" checked /> warrior <br>
-        <input type="radio" name="playerClass" value="hunter" /> hunter <br>
-        <input type="radio" name="playerClass" value="thief" /> thief <br>
-        <input type="radio" name="playerClass" value="miner" /> miner <br>
+        <div class='race'>
+          <div>
+            <input type="radio" name="playerClass" value="warrior" id='warrior' checked />
+            <label for='warrior'><img src='/images/hammer.svg' /><p>Warrior</p></label>
+          </div>
+          <div>
+            <input type="radio" name="playerClass" value="hunter" id='hunter'/>
+            <label for='warrior'><img src='/images/bow.svg' /><p>Hunter</p></label>
+          </div>
+          <div>
+            <input type="radio" name="playerClass" value="thief" id='thief'/>
+            <label for='warrior'><img src='/images/dagger.svg' /><p>Thief</p></label>
+          </div>
+          <div>
+            <input type="radio" name="playerClass" value="miner" id='miner'/>
+            <label for='warrior'><img src='/images/miner.svg' /><p>Miner</p></label>
+          </div>
+        </div>
         <button class="loginBtn" type="submit">Create your Account</button>
       </form>
       <button class='linkBtn back'>Back to the home page</button>

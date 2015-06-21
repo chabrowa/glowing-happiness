@@ -15,40 +15,44 @@
 </template>
 
 <template name='login'>
-  <div class='login'>
-    <h1>Login</h1>
+  <div class="main">
+    <div class='login'>
+      <p class="login-title">Login</p>
 
-    <form id='login'>
-      <div>
-        <label for='username'>Username</label><input type="text" id="username" />
-      </div>
-      <div>
-        <label for='password'>Password</label><input type="password" id="password" />
-      </div>
-      <button type="submit">Go!</button>
-    </form>
-    <button class='back'>back</button>
+      <form id='login'>
+        <div>
+          <label for='username'>Username</label><input type="text" id="username" />
+        </div>
+        <div>
+          <label for='password'>Password</label><input type="password" id="password" />
+        </div>
+        <button class="loginBtn" type="submit">Go!</button>
+      </form>
+      <button class='goTologin back'>Back to the home page</button>
+    </div>
   </div>
 </template>
 
 <template name='signup'>
-  <div class='signup'>
-    <h1>Signup</h1>
+  <div class="main">
+    <div class='signup'>
+      <h1>Signup</h1>
 
-    <form id='signup'>
-      <div>
-        <label for='username'>Username</label><input type="text" id="username_signup" />
-      </div>
-      <div>
-        <label for='password'>Password</label><input type="password" id="password_signup" />
-      </div>
-      Class:<br>
-      <input type="radio" name="playerClass" value="warrior" checked /> warrior <br>
-      <input type="radio" name="playerClass" value="hunter" /> hunter <br>
-      <input type="radio" name="playerClass" value="thief" /> thief <br>
-      <input type="radio" name="playerClass" value="miner" /> miner <br>
-      <button type="submit">Create your Account</button>
-    </form>
-    <button class='back'>back</button>
+      <form id='signup'>
+        <div>
+          <label for='username'>Username</label><input type="text" id="username_signup" />
+        </div>
+        <div>
+          <label for='password'>Password</label><input type="password" id="password_signup" />
+        </div>
+        Class:<br>
+        <input type="radio" name="playerClass" value="warrior" checked /> warrior <br>
+        <input type="radio" name="playerClass" value="hunter" /> hunter <br>
+        <input type="radio" name="playerClass" value="thief" /> thief <br>
+        <input type="radio" name="playerClass" value="miner" /> miner <br>
+        <button type="submit">Create your Account</button>
+      </form>
+      <button class='back'>back</button>
+    </div>
   </div>
 </template>

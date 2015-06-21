@@ -11,8 +11,8 @@ Meteor.methods({
     }
   },
   // called by the extension when there is a fight
-  changeURL: function(userId, fight) {
-    console.log('FIGHT: ' + userId + ' at ' + url);
+  fight: function(userId, fight) {
+    console.log('FIGHT: ' + fight);
     if (userId) {
       Fights.insert({
         attacker: userId,

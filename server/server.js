@@ -9,10 +9,8 @@ Accounts.onCreateUser(function(options, user) {
   user.level = 1;
   user.pointsToSpend = 10;
   user.className = options.profile.className;
-  user.race = options.profile.race;
 
   delete options.profile.className;
-  delete options.profile.race;
 
   switch (user.className) {
     case 'Warrior':

@@ -1,1 +1,1 @@
-window.me = Meteor.subscribe('me');
+Meteor.subscribe('me');

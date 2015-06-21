@@ -46,14 +46,12 @@ Template.signup.events({
     event.preventDefault();
     var username = template.find('#username_signup').value;
     var password = template.find('#password_signup').value;
-    var race = template.find('[name=playerRace]:checked').value;
     var className = template.find('[name=playerClass]:checked').value;
     
     Accounts.createUser({
       username: username,
       password: password,
       profile: {
-        race: race,
         className: className
       }
     }, function (error) {

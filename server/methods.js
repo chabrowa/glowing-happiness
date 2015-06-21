@@ -3,7 +3,9 @@ Meteor.methods({
   changeURL: function(url, userId) {
     console.log(userId + ' at ' + url);
     check(url, String);
-    if (userId) {
+    var user = Meteor.users.findOne(userId);
+    if (user) {
+
       Meteor.users.update(userId, {$set: {'profile.url': url}});
       return 'got it';
     } else {

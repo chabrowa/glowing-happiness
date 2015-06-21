@@ -1,27 +1,11 @@
-//Template.stats.onRendered(function(){
-// $(".dial").knob({
-//   'dynamicDraw': true
-// });
-//
-// var finalValue = 200;
-//
-//// var increaseValue = function(counter) {
-////   setTimeout(function(){
-////     $(".dial").val(counter);
-////     counter++;
-////     if (counter <= finalValue) {
-////       increaseValue(counter);
-////     }
-////   }, 30);
-//// };
-////
-////     increaseValue(1);
-//
-//   $({value: 0}).animate({ value: finalValue }, {
-//       duration: 1000,
-//       easing: 'swing',
-//       progress: function () {
-//         $(".dial").val(Math.ceil(this.value)).trigger('change')
-//       }
-//   });
-//});
+Template.stats.events({
+  'click .increase.strength': function() {
+    Meteor.call('increaseStat', 'strength', function(){});
+  },
+  'click .increase.speed': function() {
+    Meteor.call('increaseStat', 'speed', function(){});
+  },
+  'click .increase.dexterity': function() {
+    Meteor.call('increaseStat', 'dexterity', function(){});
+  }
+});

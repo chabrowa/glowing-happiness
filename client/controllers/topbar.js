@@ -6,6 +6,10 @@ Template.topbar.onRendered(function() {
 Template.topbar.helpers({
   'selected': function(name) {
     return Session.get('page') === name;
+  },
+  'percentXP': function() {
+    var currentLevel = levelsScale[Meteor.user().level - 1];
+    return  100 * (Meteor.user().xp - currentLevel.totalXP) / currentLevel.toNextLevel;
   }
 });
 

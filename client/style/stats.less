@@ -7,6 +7,7 @@
     width: 250px;
     float: left;
     margin-bottom: 50px;
+    position: relative;
     .label {
       color: @neon-blue;
       font-size: 0.7em;
@@ -21,6 +22,37 @@
     .description {
       color: @light-blue;
       font-style: italic;
+    }
+    .increase {
+      cursor: pointer;
+      position: absolute;
+      top: 40px;
+      left: 100px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid @neon-blue;
+      border-radius: 50%;
+      padding-left: 15px;
+      padding-top: 3px;
+      box-shadow: 0 0 15px 1px fade(@neon-blue, 20);
+      user-select: none;
+      span {
+        font-size: 2em;
+      }
+    }
+  }
+  .pointToSpend {
+    .label {
+      color: @neon-blue;
+      font-size: 0.7em;
+      letter-spacing: 2px;
+      position: relative;
+      top: -10px;
+    }
+    .value {
+      margin-left: 1em;
+      font-size: 3em;
+      font-weight: 100;
     }
   }
 }

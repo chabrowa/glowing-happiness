@@ -21,17 +21,38 @@
         <p class='label'>Strength</p>
         <p class='value'>{{currentUser.strength}}</p>
         <p class='description'>bla bla bla</p>
+        {{#if currentUser.pointsToSpend}}
+          <div class='increase strength'>
+            <span>+</span>
+          </div>
+        {{/if}}
       </div>
       <div class='characteristic'>
         <p class='label'>Dexterity</p>
         <p class='value'>{{currentUser.dexterity}}</p>
         <p class='description'>bla bla bla</p>
+        {{#if currentUser.pointsToSpend}}
+          <div class='increase dexterity'>
+            <span>+</span>
+          </div>
+        {{/if}}
       </div>
       <div class='characteristic'>
         <p class='label'>Speed</p>
         <p class='value'>{{currentUser.speed}}</p>
         <p class='description'>bla bla bla</p>
+        {{#if currentUser.pointsToSpend}}
+          <div class='increase speed'>
+            <span>+</span>
+          </div>
+        {{/if}}
       </div>
+      {{#if currentUser.pointsToSpend}}
+        <div class='pointToSpend'>
+          <span class='label'>Points left to spend</span>
+          <span class='value'>{{currentUser.pointsToSpend}}</span>
+        </div>
+      {{/if}}
     </div>
     <div class='clearfix'></div>
   </div>

@@ -9,7 +9,10 @@ Template.topbar.helpers({
   },
   'percentXP': function() {
     var currentLevel = levelsScale[Meteor.user().level - 1];
-    return  100 * (Meteor.user().xp - currentLevel.totalXP) / currentLevel.toNextLevel;
+    if (currentLevel) {
+      return 100 * (Meteor.user().xp - currentLevel.totalXP) / currentLevel.toNextLevel;
+    }
+    return 0;
   }
 });
 

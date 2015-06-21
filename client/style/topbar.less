@@ -91,8 +91,10 @@
         width: 100%;
         height: 2px;
         border-radius: 1px;
-        background: #455058;
+        background: @gray;
         .current-progress {
+          width: 0%;
+          transition: width 0.25s ease-out 0.3s;
           height: 2px;
           background: @neon-blue;
           box-shadow: 0 0 5px 1px @neon-blue;
@@ -164,7 +166,7 @@
         margin-top: 13px;
         margin-left: 13px;
         .graphic {
-          fill: #455058;
+          fill: @gray;
           transition: all 0.25s ease-out;
         }
       }

@@ -1,0 +1,40 @@
+@import 'colors';
+
+.loader {
+  background: transparent;
+  border-radius: 27px;
+  text-decoration: none;
+  text-align: center;
+  height: 54px;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  transition: background-color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s, border-radius 0.3s;
+  width: 54px;
+  border: 6.5px solid @gray;
+  padding: 0;
+  margin-top: 50px;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  .progress-circle {
+    transform-origin: center center;
+    height: 54px;
+    width: 54px;
+    pointer-events: none;
+    animation: spinLoader 0.9s infinite cubic-bezier(0.085, 0.260, 0.935, 0.710);
+    transform: translate3d(-6.5px, -6.5px, 0);
+    path {
+      fill: none;
+      stroke: @neon-blue;
+      stroke-width: 5;
+    }
+  }
+}
+
+@keyframes spinLoader {
+  from {
+    transform: translate3d(-6.5px, -6.5px, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(-6.5px, -6.5px, 0) rotate(360deg);
+  }
+}

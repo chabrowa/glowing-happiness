@@ -5,6 +5,8 @@ Accounts.onCreateUser(function(options, user) {
   user.dexterity = 10;
   user.strength = 10;
   user.speed = 10;
+  user.xp = 0;
+  user.level = 1;
   user.pointsToSpend = 10;
   user.className = options.profile.className;
   user.race = options.profile.race;

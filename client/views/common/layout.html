@@ -1,0 +1,29 @@
+<head>
+  <title>zombie-game</title>
+</head>
+
+<body>
+  {{#if currentUser}}
+    {{> topbar}}
+    {{> router}}
+  {{else}}
+    {{> landing}}
+  {{/if}}
+</body>
+
+<template name="router">
+
+  {{#if selected_page 'inventory'}}
+    {{> inventory}}
+  {{else}}{{#if selected_page 'stats'}}
+    {{> stats}}
+  {{else}}{{#if selected_page 'settings'}}
+    {{> settings}}
+  {{else}}{{#if selected_page 'achievements'}}
+    {{> achievements}}
+  {{else}}{{#if selected_page 'clan'}}
+    {{> clan}}
+  {{else}}
+    {{> news}}
+  {{/if}}{{/if}}{{/if}}{{/if}}{{/if}}
+</template>

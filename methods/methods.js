@@ -11,5 +11,14 @@ Meteor.methods({
     update[stat] = 1;
     Meteor.users.update(this.userId, {$inc: update});
     return;
+  },
+  checkLevel: function(user, xp) {
+    var incr = 0;
+    var nextLevel = levelsScale[user.level];
+    while(nextLevel.totalXP <= user.xp + xp) {
+      incr++;
+      nextLevel = levelsScale[user.level + incr];
+    }
+    return incr;
   }
 });

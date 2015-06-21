@@ -5,9 +5,9 @@ Meteor.methods({
     check(url, String);
     var user = Meteor.users.findOne(userId);
     if (user) {
-
-      Meteor.users.update(userId, {$set: {'profile.url': url}});
-      return 'got it';
+      var incrLevel = Meteor.call('checkLevel', user, 1);
+      Meteor.users.update(userId, {$set: {'profile.url': url}, $inc: {level: incrLevel, xp: 1}});
+      return incrLevel;
     } else {
       return 'not connected';
     }
@@ -16,6 +16,7 @@ Meteor.methods({
   fight: function(userId, fight) {
     console.log('FIGHT: ' + fight);
     if (userId) {
+
       Fights.insert({
         attacker: userId,
         defender: fight[fight.length - 1].opponent._id,

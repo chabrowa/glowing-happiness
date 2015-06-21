@@ -7,6 +7,8 @@ Accounts.onCreateUser(function(options, user) {
   user.speed = 10;
   user.xp = 0;
   user.level = 1;
+  user.gold = 0;
+  user.diamond = 0;
   user.pointsToSpend = 10;
   user.className = options.profile.className;
 

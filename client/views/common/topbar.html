@@ -3,7 +3,7 @@
     <div class='left-part'>
       <div class='name'>
         <span>
-          Mathieu
+          {{currentUser.username}}
         </span>
       </div>
       <div class='separator'></div>
@@ -15,10 +15,10 @@
       <div class='separator'></div>
       <div class='xp'>
         <div class='label-left'>
-          <span class='label'>Hunter</span> <span class='value'>[13]</span>
+          <span class='label'>{{currentUser.className}}</span> <span class='value'>[{{currentUser.level}}]</span>
         </div>
         <div class='label-right'>
-          <span class='label'>Exp</span> <span class='value'>298.329</span>
+          <span class='label'>Exp</span> <span class='value'>{{currentUser.xp}}</span>
         </div>
         <div class='progress'>
           <div class='current-progress' style='width:25%'></div>
@@ -28,19 +28,19 @@
       <div class='money credit'>
         <img class='icon' src="/images/coins1.svg" />
         <p class='label'>
-          Credits
+          Golds
         </p>
         <p class='value'>
-          156.123
+          {{currentUser.gold}}
         </p>
       </div>
       <div class='money platinium'>
         <img class='icon' src="/images/diamonds.svg" />
         <p class='label'>
-          Platinium
+          Diamonds
         </p>
         <p class='value'>
-          1012
+          {{currentUser.diamond}}
         </p>
       </div>
     </div>

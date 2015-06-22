@@ -11,6 +11,31 @@ Accounts.onCreateUser(function(options, user) {
   user.diamond = 0;
   user.pointsToSpend = 10;
   user.className = options.profile.className;
+  user.armor = {
+    name: 'Nothing',
+    characteristics: [],
+    image: '/images/blank.svg'
+  };
+  user.leftHand = {
+    name: 'Nothing',
+    characteristics: [],
+    image: '/images/blank.svg'
+  };
+  user.rightHand = {
+    name: 'Nothing',
+    characteristics: [],
+    image: '/images/blank.svg'
+  };
+  user.head = {
+    name: 'Nothing',
+    characteristics: [],
+    image: '/images/blank.svg'
+  };
+  user.stone = {
+    name: 'Nothing',
+    characteristics: [],
+    image: '/images/blank.svg'
+  }
 
   delete options.profile.className;
 

@@ -4,87 +4,72 @@
     <div class='inventory-template'>
       <div class='item armor'>
         <p class='label'>Armor</p>
-        <p class='name'>Rhino Prime</p>
-        <div class='select-box selected'>
+        <p class='name'>{{currentUser.armor.name}}</p>
+        <div class='select-box'>
           <div class='image'>
+            <img src='{{currentUser.armor.image}}' />
           </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
+          {{#each currentUser.armor.characteristics}}
+            <div class='characteristic'>
+              <span data-label='{{name}}'>{{value}}</span>
+            </div>
+          {{/each}}
         </div>
       </div>
       <div class='item right-hand'>
         <p class='label'>Right Hand</p>
-        <p class='name'>Bolter Prime</p>
+        <p class='name'>{{currentUser.rightHand.name}}</p>
         <div class='select-box'>
           <div class='image'>
+            <img src='{{currentUser.rightHand.image}}' />
           </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
+          {{#each currentUser.rightHand.characteristics}}
+            <div class='characteristic'>
+              <span data-label='{{name}}'>{{value}}</span>
+            </div>
+          {{/each}}
         </div>
       </div>
       <div class='item left-hand'>
         <p class='label'>Left Hand</p>
-        <p class='name'>Bolter Prime</p>
+        <p class='name'>{{currentUser.leftHand.name}}</p>
         <div class='select-box'>
           <div class='image'>
+            <img src='{{currentUser.leftHand.image}}' />
           </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
+          {{#each currentUser.leftHand.characteristics}}
+            <div class='characteristic'>
+              <span data-label='{{name}}'>{{value}}</span>
+            </div>
+          {{/each}}
         </div>
       </div>
       <div class='item head'>
         <p class='label'>Head</p>
-        <p class='name'>Bolter Prime</p>
+        <p class='name'>{{currentUser.head.name}}</p>
         <div class='select-box'>
           <div class='image'>
+            <img src='{{currentUser.head.image}}' />
           </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
+          {{#each currentUser.head.characteristics}}
+            <div class='characteristic'>
+              <span data-label='{{name}}'>{{value}}</span>
+            </div>
+          {{/each}}
         </div>
       </div>
       <div class='item stone'>
         <p class='label'>Magic Stone</p>
-        <p class='name'>Bolter Prime</p>
+        <p class='name'>{{currentUser.stone.name}}</p>
         <div class='select-box'>
           <div class='image'>
+            <img src='{{currentUser.stone.image}}' />
           </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
-          <div class='characteristic'>
-            <span data-label='Corpus'>1205</span>
-          </div>
+          {{#each currentUser.stone.characteristics}}
+            <div class='characteristic'>
+              <span data-label='{{name}}'>{{value}}</span>
+            </div>
+          {{/each}}
         </div>
       </div>
     </div>

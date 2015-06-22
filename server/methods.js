@@ -47,7 +47,7 @@ Meteor.methods({
 function checkLoot(user, url) {
   // TODO use luck
   if (Math.random() * 100 > 50) {
-    var gold = Math.floor(Math.random() * 10));
+    var gold = Math.floor(Math.random() * 10);
     Meteor.users.update(user._id, {$inc: {gold: gold}}, function() {});
     Notifications.insert({
         userId: user._id,

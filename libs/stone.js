@@ -74,14 +74,20 @@ Stones = [];
 
 qualities.forEach(function(quality) {
   stoneBase.forEach(function(stone) {
-    stone.name = quality.name + stone.name;
-    stone.level = quality.level;
-    stone.image = quality.image;
-    stone.charateristics = stone.characteristics.map(function(char) {
-      char.value *= quality.multiplier;
-      return char;
-    });
-    Stones.push(stone);
+    var completeStone = {
+      color: stone.color,
+      name: quality.name + stone.name,
+      level: quality.level,
+      image: quality.image,
+      characteristics: stone.characteristics.map(function(char) {
+        var result = {
+          name: char.name,
+          value: char.value * quality.multiplier
+        }
+        return result;
+      })
+    }
+    Stones.push(completeStone);
   });
 })
 

@@ -6,7 +6,7 @@
         <p class='label'>Armor</p>
         <p class='name'>{{currentUser.armor.name}}</p>
         <div class='select-box'>
-          <div class='image'>
+          <div class='image' id="select-armor">
             <img src='{{currentUser.armor.image}}' />
           </div>
           {{#each currentUser.armor.characteristics}}
@@ -20,7 +20,7 @@
         <p class='label'>Right Hand</p>
         <p class='name'>{{currentUser.rightHand.name}}</p>
         <div class='select-box'>
-          <div class='image'>
+          <div class='image' id="select-rightHand">
             <img src='{{currentUser.rightHand.image}}' />
           </div>
           {{#each currentUser.rightHand.characteristics}}
@@ -33,7 +33,7 @@
       <div class='item left-hand'>
         <p class='label'>Left Hand</p>
         <p class='name'>{{currentUser.leftHand.name}}</p>
-        <div class='select-box'>
+        <div class='select-box' id="select-leftHand">
           <div class='image'>
             <img src='{{currentUser.leftHand.image}}' />
           </div>
@@ -48,7 +48,7 @@
         <p class='label'>Head</p>
         <p class='name'>{{currentUser.head.name}}</p>
         <div class='select-box'>
-          <div class='image'>
+          <div class='image' id="select-head">
             <img src='{{currentUser.head.image}}' />
           </div>
           {{#each currentUser.head.characteristics}}
@@ -62,7 +62,7 @@
         <p class='label'>Magic Stone</p>
         <p class='name'>{{currentUser.stone.name}}</p>
         <div class='select-box'>
-          <div class='image'>
+          <div class='image' id="select-stone">
             <img src='{{currentUser.stone.image}}' />
           </div>
           {{#each currentUser.stone.characteristics}}
@@ -74,5 +74,30 @@
       </div>
     </div>
     <div class='clearfix'></div>
+  </div>
+  {{#if show_selection}}
+    {{> selection_item}}
+  {{/if}}
+</template>
+
+<template name='selection_item'>
+  <div class='overlay-selection'>
+    {{#each items}}
+      {{> item_selection_item}}
+    {{/each}}
+  </div>
+</template>
+
+<template name='item_selection_item'>
+  <div class='item'>
+    <div class='image' id="select-stone">
+      <img src='{{image}}' />
+    </div>
+    <p class='name'>{{name}}</p>
+    {{#each characteristics}}
+      <div class='characteristic'>
+        <span data-label='{{name}}'>{{value}}</span>
+      </div>
+    {{/each}}
   </div>
 </template>

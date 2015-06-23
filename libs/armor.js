@@ -31,7 +31,7 @@ var armorBase = [
   },
   {
     name: 'armor 6',
-    characteristics: [{name: 'health', value: 10}],
+    characteristics: [],
     level: 1,
     image: '/images/armor/armor.svg'
   },
@@ -43,7 +43,7 @@ var armorBase = [
   },
       {
     name: 'armor 8',
-    characteristics: [{name: 'defence', value: 2}],
+    characteristics: [],
     level: 1,
     image: '/images/armor/armor.svg'
   },

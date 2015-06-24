@@ -79,16 +79,17 @@ qualities.forEach(function(quality) {
       name: quality.name + stone.name,
       level: quality.level,
       image: quality.image,
+      type: 'stone',
       characteristics: stone.characteristics.map(function(char) {
         var result = {
           name: char.name,
           value: char.value * quality.multiplier
-        }
+        };
         return result;
       })
-    }
+    };
     Stones.push(completeStone);
   });
-})
+});
 
 //chipped, flawed, nothing, flawless, perfect, radiant, square, flawless square, perfect square, radiant square, star, flawless star, perfect star, radiant star, marquise, imperial, flawless imperial, royal, flawless royal

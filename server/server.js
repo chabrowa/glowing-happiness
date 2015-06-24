@@ -11,6 +11,32 @@ Accounts.onCreateUser(function(options, user) {
   user.diamond = 0;
   user.pointsToSpend = 10;
   user.className = options.profile.className;
+  user.ownedItems = [
+    {
+      name: 'Nothing',
+      type: 'armor',
+      characteristics: [],
+      image: '/images/blank.svg'
+    },
+    {
+      name: 'Nothing',
+      type: 'weapon',
+      characteristics: [],
+      image: '/images/blank.svg'
+    },
+    {
+      name: 'Nothing',
+      type: 'stone',
+      characteristics: [],
+      image: '/images/blank.svg'
+    },
+    {
+      name: 'Nothing',
+      type: 'head',
+      characteristics: [],
+      image: '/images/blank.svg'
+    }
+  ];
   user.armor = {
     name: 'Nothing',
     characteristics: [],
@@ -35,7 +61,7 @@ Accounts.onCreateUser(function(options, user) {
     name: 'Nothing',
     characteristics: [],
     image: '/images/blank.svg'
-  }
+  };
 
   delete options.profile.className;
 

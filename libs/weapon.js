@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-var weaponBase = [
-=======
 Weapons = [
->>>>>>> 67ded916a576d055ff96d38b74f2d78965983f82
   {
     name: 'bow 1',
     type: 'weapon',

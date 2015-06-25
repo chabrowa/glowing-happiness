@@ -20,5 +20,22 @@ Meteor.methods({
       nextLevel = levelsScale[user.level + incr];
     }
     return incr;
+  },
+  equip: function(slot, item) {
+    if (!this.userId) {return;}
+    var user = Meteor.users.findOne(this.userId);
+    var oldItem = user[slot];
+    var update = {$inc: {}, $set:{}};
+    oldItem.characteristics.forEach(function(characteritic) {
+      update.$inc[characteritic.name] = -characteritic.value;
+    });
+    item.characteristics.forEach(function(characteritic) {
+      update.$inc[characteritic.name] += characteritic.value;
+    });
+    if (oldItem.characteristics.length + item.characteristics.length === 0) {
+      delete update.$inc;
+    }
+    update.$set[slot] = item;
+    return Meteor.users.update(this.userId, update);
   }
 });

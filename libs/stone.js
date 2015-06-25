@@ -36,37 +36,44 @@ var stoneBase = [
   {
     name: 'Amethyst',
     characteristics: [{name: 'health', value: 5}, {name: 'strength', value: 1}],
-    color: '#590242'
+    color: '#590242',
+    type: 'stone'
   },
   {
     name: 'Ruby',
     characteristics: [{name: 'defence', value: 1}, {name: 'strength', value: 1}],
-    color: '#BF0404'
+    color: '#BF0404',
+    type: 'stone'
   },
     {
     name: 'Sapphire',
     characteristics: [{name: 'luck', value: 5}, {name: 'speed', value: 1}],
-    color: '#03178C'
+    color: '#03178C',
+    type: 'stone'
   },
     {
     name: 'Opal',
     characteristics: [{name: 'defence', value: 1}, {name: 'dexterity', value: 1}],
-    color: '#FCF8A7'
+    color: '#FCF8A7',
+    type: 'stone'
   },
     {
     name: 'Onyx',
     characteristics: [{name: 'health', value: 10}, {name: 'luck', value: -5}, {name: 'dexterity', value: 1}],
-    color: '#000000'
+    color: '#000000',
+    type: 'stone'
   },
     {
     name: 'Malachite',
     characteristics: [{name: 'defence', value: 3}, {name: 'strength', value: -1}],
-    color: '#00754A'
+    color: '#00754A',
+    type: 'stone'
   },
     {
     name: 'Topaz',
     characteristics: [{name: 'dexterity', value: 2}, {name: 'strength', value: -2}, {name: 'speed', value: 2}],
-    color: '#BE5C01'
+    color: '#BE5C01',
+    type: 'stone'
   },
 ];
 

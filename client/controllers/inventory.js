@@ -1,5 +1,5 @@
 Template.inventory.helpers({
-  show_selection: function() {
+  showSelection: function() {
     return Session.get('show_items');
   }
 });
@@ -24,7 +24,7 @@ Template.inventory.events({
 
 Template.selection_item.helpers({
   items: function() {
-    switch(Session.get('show_items')) {
+    switch (Session.get('show_items')) {
       case 'stone':
         return Meteor.user().ownedItems.filter(function(item) {return item.type === 'stone';});
       case 'armor':
@@ -39,7 +39,7 @@ Template.selection_item.helpers({
 });
 
 Template.item_selection_item.events({
-  'click': function(e, t) {
+  click: function(e, t) {
     Meteor.call('equip', Session.get('show_items'), t.data, function() {Session.set('show_items', null);});
   }
 });

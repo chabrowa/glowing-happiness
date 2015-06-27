@@ -4,14 +4,15 @@ Template.topbar.onRendered(function() {
 });
 
 Template.topbar.helpers({
-  'selected': function(name) {
+  selected: function(name) {
     return Session.get('page') === name;
   },
-  'percentXP': function() {
+  percentXP: function() {
     var currentLevel = levelsScale[Meteor.user().level - 1];
     if (currentLevel) {
       return 100 * (Meteor.user().xp - currentLevel.totalXP) / currentLevel.toNextLevel;
     }
+
     return 0;
   }
 });

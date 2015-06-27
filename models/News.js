@@ -1,4 +1,4 @@
-News = new Mongo.Collection("news");
+News = new Mongo.Collection('news');
 
 News.allow({
   insert: function(userId, doc) {

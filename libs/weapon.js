@@ -4,24 +4,21 @@ Weapons = [
     type: 'weapon',
     characteristics: [{name: 'strength', value: 1}, {name: 'speed', value: 2}, {name: 'dexterity', value: -1}],
     level: 1,
-    image: '/images/weapons/bow.svg',
-    type: 'weapon'
+    image: '/images/weapons/bow.svg'
   },
   {
     name: 'bow 2',
     type: 'weapon',
     characteristics: [{name: 'speed', value: 3}, {name: 'luck', value: -5}],
     level: 1,
-    image: '/images/weapons/bow.svg',
-    type: 'weapon'
+    image: '/images/weapons/bow.svg'
   },
   {
     name: 'bow 3',
     type: 'weapon',
     characteristics: [{name: 'speed', value: 1}, {name: 'luck', value: 5}],
     level: 1,
-    image: '/images/weapons/bow.svg',
-    type: 'weapon'
+    image: '/images/weapons/bow.svg'
   },
   /************************************/
   {
@@ -29,24 +26,21 @@ Weapons = [
     type: 'weapon',
     characteristics: [{name: 'strength', value: 1}, {name: 'dexterity', value: 1}],
     level: 1,
-    image: '/images/weapons/dagger.svg',
-    type: 'weapon'
+    image: '/images/weapons/dagger.svg'
   },
   {
     name: 'dagger 2',
     type: 'weapon',
     characteristics: [{name: 'strength', value: 1}, {name: 'speed', value: 1}],
     level: 1,
-    image: '/images/weapons/dagger.svg',
-    type: 'weapon'
+    image: '/images/weapons/dagger.svg'
   },
   {
     name: 'dagger 3',
     type: 'weapon',
     characteristics: [{name: 'strength', value: 2}, {name: 'speed', value: 1}, {name: 'luck', value: -5}],
     level: 1,
-    image: '/images/weapons/dagger.svg',
-    type: 'weapon'
+    image: '/images/weapons/dagger.svg'
   },
   /************************************/
   {
@@ -54,24 +48,21 @@ Weapons = [
     type: 'weapon',
     characteristics: [{name: 'strength', value: 3}, {name: 'luck', value: 5}, {name: 'dexterity', value: -2}],
     level: 1,
-    image: '/images/weapons/hammer.svg',
-    type: 'weapon'
+    image: '/images/weapons/hammer.svg'
   },
   {
     name: 'hammer 2',
     type: 'weapon',
     characteristics: [{name: 'strength', value: 2}, {name: 'speed', value: -1}, {name: 'dexterity', value: 1}],
     level: 1,
-    image: '/images/weapons/hammer.svg',
-    type: 'weapon'
+    image: '/images/weapons/hammer.svg'
   },
   {
     name: 'hammer 3',
     type: 'weapon',
     characteristics: [{name: 'strength', value: 1}, {name: 'speed', value: 2}, {name: 'luck', value: -5}],
     level: 1,
-    image: '/images/weapons/hammer.svg',
-    type: 'weapon'
+    image: '/images/weapons/hammer.svg'
   },
   /************************************/
   {
@@ -79,24 +70,21 @@ Weapons = [
     type: 'weapon',
     characteristics: [{name: 'strength', value: 1}, {name: 'luck', value: 5}],
     level: 1,
-    image: '/images/weapons/mace.svg',
-    type: 'weapon'
+    image: '/images/weapons/mace.svg'
   },
   {
     name: 'mace 2',
     type: 'weapon',
     characteristics: [{name: 'strength', value: 2}, {name: 'speed', value: -2}, {name: 'dexterity', value: 2}],
     level: 1,
-    image: '/images/weapons/mace.svg',
-    type: 'weapon'
+    image: '/images/weapons/mace.svg'
   },
   {
     name: 'mace 3',
     type: 'weapon',
     characteristics: [{name: 'strength', value: 3}, {name: 'luck', value: -10}, {name: 'speed', value: 1}],
     level: 1,
-    image: '/images/weapons/mace.svg',
-    type: 'weapon'
+    image: '/images/weapons/mace.svg'
   },
   /************************************/
   {
@@ -104,24 +92,21 @@ Weapons = [
     type: 'weapon',
     characteristics: [{name: 'strength', value: 2}, {name: 'speed', value: 1}, {name: 'dexterity', value: -1}],
     level: 1,
-    image: '/images/weapons/pick.svg',
-    type: 'weapon'
+    image: '/images/weapons/pick.svg'
   },
   {
     name: 'pick 2',
     type: 'weapon',
     characteristics: [{name: 'strength', value: 2}, {name: 'luck', value: -5}, {name: 'dexterity', value: -1}],
     level: 1,
-    image: '/images/weapons/pick.svg',
-    type: 'weapon'
+    image: '/images/weapons/pick.svg'
   },
   {
     name: 'pick 3',
     type: 'weapon',
     characteristics: [{name: 'strength', value: 1}, {name: 'speed', value: 1}],
     level: 1,
-    image: '/images/weapons/pick.svg',
-    type: 'weapon'
+    image: '/images/weapons/pick.svg'
   },
   /************************************/
   {
@@ -129,24 +114,21 @@ Weapons = [
     type: 'weapon',
     characteristics: [{name: 'defence', value: 2}],
     level: 1,
-    image: '/images/weapons/shield.svg',
-    type: 'weapon'
+    image: '/images/weapons/shield.svg'
   },
   {
     name: 'shield 2',
     type: 'weapon',
     characteristics: [{name: 'defence', value: 1}, {name: 'dexterity', value: 1}],
     level: 1,
-    image: '/images/weapons/shield.svg',
-    type: 'weapon'
+    image: '/images/weapons/shield.svg'
   },
   {
     name: 'shield 3',
     type: 'weapon',
     characteristics: [{name: 'defence', value: 3}, {name: 'speed', value: -1}],
     level: 1,
-    image: '/images/weapons/shield.svg',
-    type: 'weapon'
+    image: '/images/weapons/shield.svg'
   },
   /************************************/
   {
@@ -154,24 +136,20 @@ Weapons = [
     type: 'weapon',
     characteristics: [{name: 'strength', value: 2}],
     level: 1,
-    image: '/images/weapons/sword.svg',
-    type: 'weapon'
+    image: '/images/weapons/sword.svg'
   },
   {
     name: 'sword 2',
     type: 'weapon',
     characteristics: [{name: 'strength', value: 3}, {name: 'speed', value: -1}],
     level: 1,
-    image: '/images/weapons/sword.svg',
-    type: 'weapon'
+    image: '/images/weapons/sword.svg'
   },
   {
     name: 'sword 3',
     type: 'weapon',
     characteristics: [{name: 'strength', value: 1}, {name: 'speed', value: 1}],
     level: 1,
-    image: '/images/weapons/sword.svg',
-    type: 'weapon'
-  },
-  /************************************/
+    image: '/images/weapons/sword.svg'
+  }
 ];

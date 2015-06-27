@@ -1,4 +1,4 @@
-Fights = new Mongo.Collection("fights");
+Fights = new Mongo.Collection('fights');
 
 Fights.allow({
   insert: function(userId, doc) {

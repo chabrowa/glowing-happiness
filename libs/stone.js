@@ -74,7 +74,7 @@ var stoneBase = [
     characteristics: [{name: 'dexterity', value: 2}, {name: 'strength', value: -2}, {name: 'speed', value: 2}],
     color: '#BE5C01',
     type: 'stone'
-  },
+  }
 ];
 
 Stones = [];

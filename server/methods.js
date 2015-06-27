@@ -13,6 +13,7 @@ Meteor.methods({
       return 'not connected';
     }
   },
+
   // called by the extension when there is a fight
   fight: function(userId, fight) {
     console.log('FIGHT: ' + fight);
@@ -54,7 +55,7 @@ function checkLoot(user, url) {
         type: 'exploration',
         message: 'You\'ve found ' + gold + ' golds on ' + url + '.',
         createdAt: new Date()
-      }, function(){});
+      }, function() {});
   }
 }
 
@@ -68,8 +69,9 @@ function increaseXP(user, xp) {
         type: 'achievements',
         message: 'Level up! You\'re now level ' + user.level + incrLevel + '.',
         createdAt: new Date()
-      }, function(){});
+      }, function() {});
     });
   }
+
   return incrLevel;
 }

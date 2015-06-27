@@ -19,17 +19,16 @@ Template.landing.helpers({
 });
 
 Template.login.events({
-  'submit': function (event, template) {
+  submit: function(event, template) {
     event.preventDefault();
     var username = template.find('#username').value;
     var password = template.find('#password').value;
 
-    Meteor.loginWithPassword(username, password, function(error, user){
-      if(error) {
-       console.log(error); 
+    Meteor.loginWithPassword(username, password, function(error, user) {
+      if (error) {
+        console.log(error);
       } else {
         Session.set('page', 'news');
-        console.log("logged in!");
       }
     });
   },
@@ -41,27 +40,28 @@ Template.login.events({
 });
 
 Template.signup.events({
-  'submit': function (event, template) {
+  submit: function(event, template) {
     event.preventDefault();
     var username = template.find('#username_signup').value;
     var password = template.find('#password_signup').value;
     var className = template.find('[name=playerClass]:checked').value;
-    
+
     Accounts.createUser({
       username: username,
       password: password,
       profile: {
         className: className
       }
-    }, function (error) {
+    }, function(error) {
       if (error) {
-        console.log("Cannot create user");
+        // TODO show error
+        console.log('Cannot create user');
       } else {
         Session.set('page', 'stats');
       }
     });
   },
-  
+
   'click .back': function(e) {
     e.preventDefault();
     Session.set('landing_page', 'home');

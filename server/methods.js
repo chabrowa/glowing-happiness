@@ -46,8 +46,8 @@ Meteor.methods({
 });
 
 function checkLoot(user, url) {
-  // TODO use luck
-  if (Math.random() * 100 > 50) {
+  // gold
+  if ((Math.random() * 100) + (4 * Math.log(user.luck / 4)) > 55) {
     var gold = Math.floor(Math.random() * 10);
     Meteor.users.update(user._id, {$inc: {gold: gold}}, function() {});
     Notifications.insert({
@@ -56,6 +56,35 @@ function checkLoot(user, url) {
         message: 'You\'ve found ' + gold + ' golds on ' + url + '.',
         createdAt: new Date()
       }, function() {});
+
+    // loot
+    if ((Math.random() * 100) + (4 * Math.log(user.luck / 4)) > 90) {
+      var choosingGroup = Math.floor(Math.random() * 100);
+
+      var item;
+      if (choosingGroup <= 25) {
+        item = Math.floor(Math.random() * (Armors.length));
+        item = Armors[item];
+      } else if (choosingGroup <= 50) {
+        item = Math.floor(Math.random() * (Heads.length));
+        item = Heads[item];
+      } else if (choosingGroup <= 75) {
+        item = Math.floor(Math.random() * (Weapons.length));
+        item = Weapons[item];
+      } else {
+        item = Math.floor(Math.random() * (Stones.length));
+        item = Stones[item];
+      }
+
+      Meteor.users.update(user._id, {$push: {ownedItems: item}});
+      Notifications.insert({
+        userId: user._id,
+        type: 'exploration',
+        message: 'You\'ve found ' + item.name + ' on ' + url + '.',
+        createdAt: new Date()
+      }, function() {});
+
+    }
   }
 }
 

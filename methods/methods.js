@@ -31,11 +31,11 @@ Meteor.methods({
     var oldItem = user[slot];
     var update = {$inc: {}, $set:{}};
     oldItem.characteristics.forEach(function(characteritic) {
-      update.$inc[characteritic.name] = -characteritic.value;
+      update.$inc[characteritic.name] = -parseInt(characteritic.value);
     });
 
     item.characteristics.forEach(function(characteritic) {
-      update.$inc[characteritic.name] += characteritic.value;
+      update.$inc[characteritic.name] += parseInt(characteritic.value);
     });
 
     if (oldItem.characteristics.length + item.characteristics.length === 0) {

@@ -1,0 +1,10 @@
+<template name="character">
+  <div class="character">
+    <img class="left-hand" src="{{currentUser.leftHand.image}}" style="transform: rotateZ(5)deg) translate(-{{currentUser.leftHand.handle}}%, 0); -webkit-transform: rotateZ(5deg) translate(-{{currentUser.leftHand.handle}}%, 0);" />
+    <img class="right-hand" src="{{currentUser.rightHand.image}}" style="transform: rotateZ(150deg) translate(-{{currentUser.rightHand.handle}}%, 0); -webkit-transform: rotateZ(150deg) translate(-{{currentUser.rightHand.handle}}%, 0);"/>
+    <img class="body" src='/images/stickman.png' />
+    <img class="armor" src="{{currentUser.armor.image}}" />
+    <img class="head" src="{{currentUser.head.image}}" />
+    <img class="stone" src="{{currentUser.stone.image}}" />
+  </div>
+</template>

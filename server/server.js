@@ -22,7 +22,8 @@ Accounts.onCreateUser(function(options, user) {
       name: 'Nothing',
       type: 'weapon',
       characteristics: [],
-      image: '/images/blank.svg'
+      image: '/images/blank.svg',
+      handle: 0
     },
     {
       name: 'Nothing',
@@ -45,12 +46,14 @@ Accounts.onCreateUser(function(options, user) {
   user.leftHand = {
     name: 'Nothing',
     characteristics: [],
-    image: '/images/blank.svg'
+    image: '/images/blank.svg',
+    handle: 0
   };
   user.rightHand = {
     name: 'Nothing',
     characteristics: [],
-    image: '/images/blank.svg'
+    image: '/images/blank.svg',
+    handle: 0
   };
   user.head = {
     name: 'Nothing',

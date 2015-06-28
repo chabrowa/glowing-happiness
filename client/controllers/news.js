@@ -28,7 +28,7 @@ var notificationListTransform = function(originalList) {
     } else if (arr[i].creation) {
       return arr[i].creation;
     } else {
-      return findPrecedentDate(arr, i - 1);
+      return findPrecedenteDate(arr, i - 1);
     }
   }
 

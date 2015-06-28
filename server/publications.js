@@ -10,3 +10,11 @@ Meteor.publish('me', function() {
     return this.ready();
   }
 });
+
+Meteor.publish('notifications', function() {
+  if (this.userId) {
+    return Notifications.find({userId: this.userId});
+  } else {
+    return this.ready();
+  }
+});

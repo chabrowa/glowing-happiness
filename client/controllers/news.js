@@ -34,7 +34,7 @@ var notificationListTransform = function(originalList) {
 
   originalList.forEach(function(item, i) {
     var creationDate = days[item.createdAt.getDay()] + ', ' + item.createdAt.getDate() + ' ' + months[ item.createdAt.getMonth()] + ' ' + item.createdAt.getFullYear();
-    var precedenteDate = findPrecedenteDate(originalList, i - 1);
+    var precedenteDate = findPrecedenteDate(transformedList, i - 1);
     if (precedenteDate === creationDate) {
       transformedList.push({
         creation: null,
